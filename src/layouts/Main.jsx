@@ -56,17 +56,14 @@ function Main() {
           quantity: newQuntity
         }
       } else {
-        return {
-          el
-        }
+        return el
       }
     })
-
+    console.log(newOrder)
     setOrder(newOrder)
   }
 
   function decrementQuantity(itemId) {
-    console.log('sadas')
     const newOrder = order.map(el => {
       if(el.id === itemId) {
         const newQuntity = el.quantity - 1
