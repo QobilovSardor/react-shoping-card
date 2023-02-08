@@ -93,8 +93,8 @@ function Main() {
       .then(response => response.json())
       .then(data => {
         data.featured && setGoods(data.featured)
+        setLoading(false)
       })
-      setLoading(false)
   }, [])
   return (
     <div className="content">
