@@ -4,6 +4,7 @@ import { API_URL, API_KEY } from '../config';
 import Loader from "../components/Loader";
 import Card from "../components/Card";
 import BasketList from "../components/BasketList";
+import { toast } from "react-toastify";
 
 function Main() {
   const [goods, setGoods] = useState([]);
@@ -32,6 +33,8 @@ function Main() {
       })
       setOrder(newOrder)
     }
+
+    toast.success('Goods added to basket succesfuly');
   }
 
   function handleBasketShow() {
@@ -41,6 +44,7 @@ function Main() {
   function removeFromBasket(itemId) {
     const newOrder = order.filter(item => item.id !== itemId);
     setOrder(newOrder);
+    toast.error('Goods deleted from basket succesfuly');
   }
 
   function incrementQunatity(itemId) {
