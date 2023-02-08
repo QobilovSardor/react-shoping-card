@@ -72,9 +72,7 @@ function Main() {
           quantity: newQuntity >= 0 ? newQuntity : 0
         }
       } else {
-        return {
-          el
-        }
+        return el
       }
     })
     setOrder(newOrder);
