@@ -68,13 +68,13 @@ export function reducer(state, {type, payload}) {
       }
     }
     case  'REMOVE_FROM_BASKET': {
+      toast.error('Goods remove from basket succesfuly')
       return {
         ...state,
         order: state.order.filter(item => item.id !== payload.id)
       }
     }
     case 'SET_GOODS': {
-      
       return {
         ...state,
         data: payload || [],
