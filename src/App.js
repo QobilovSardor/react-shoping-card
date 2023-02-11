@@ -2,13 +2,16 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import Main from "./layouts/Main";
 import { ToastContainer } from 'react-toastify';
+import {ContextProvider} from './context';
 
 function App() {
   return (
     <div>
       <ToastContainer />
       <Header />
-      <Main />
+      <ContextProvider>
+        <Main />
+      </ContextProvider>
       <Footer />
     </div>
   );
