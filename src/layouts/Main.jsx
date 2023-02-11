@@ -20,6 +20,7 @@ function Main() {
       .then(data => { 
         setGoods(data.featured)
       })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div className="content">
